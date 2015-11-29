@@ -23,12 +23,13 @@ lightning.FormFactor = "Custom"
 lightning.BrickColor = BrickColor.new'Really red'
 lightning.Size = Vector3.new(0,50,0)
 
-function onTouched(hit)
+function onTouched(hit) if hit.Name~="Base" then
 Instance.new("Fire",hit)
 local human = hit.Parent:findFirstChild("Humanoid") 
 if (human == nil) then return end 
 human:TakeDamage(20)
 end 
+end
 lightning.Touched:connect(onTouched)
 
 local weld = Instance.new("Weld",lightning)
@@ -44,12 +45,13 @@ lightning2.FormFactor = "Custom"
 lightning2.BrickColor = BrickColor.new'Really red'
 lightning2.Size = Vector3.new(0,50,0)
 
-function onTouched(hit)
+function onTouched(hit) if hit.Name~="Base" then
 Instance.new("Fire",hit)
 local human = hit.Parent:findFirstChild("Humanoid") 
 if (human == nil) then return end 
 human:TakeDamage(20)
 end 
+end
 lightning2.Touched:connect(onTouched)
 
 local weld2 = Instance.new("Weld",lightning2)
