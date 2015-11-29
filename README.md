@@ -25,6 +25,8 @@ lightning.Size = Vector3.new(0,50,0)
 
 function onTouched(hit) if hit.Name~="Base" then
 Instance.new("Fire",hit)
+expl=Instance.new('Explosion',hit)
+expl.Position = hit.Position
 local human = hit.Parent:findFirstChild("Humanoid") 
 if (human == nil) then return end 
 human:TakeDamage(20)
@@ -47,6 +49,8 @@ lightning2.Size = Vector3.new(0,50,0)
 
 function onTouched(hit) if hit.Name~="Base" then
 Instance.new("Fire",hit)
+expl=Instance.new('Explosion',hit)
+expl.Position = hit.Position
 local human = hit.Parent:findFirstChild("Humanoid") 
 if (human == nil) then return end 
 human:TakeDamage(20)
